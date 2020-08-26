@@ -2,7 +2,7 @@
 
 This is the code I made for the classic game TicTacToe
 
-Currently it only work for two people plating in the same web browser.
+Currently it only works for two people playing in the same web browser.
 
 ## TODO:
 1. Display the location for each move in the format (col, row) in the move history list
