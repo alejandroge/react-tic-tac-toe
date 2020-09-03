@@ -5,7 +5,6 @@ This is the code I made for the classic game TicTacToe
 Currently it only works for two people playing in the same web browser.
 
 ## TODO:
-1. Display the location for each move in the format (col, row) in the move history list
 1. Bold the currently selected item in the move list
 1. Add a toggle button that lets you sort the moves in either ascending or descending order
 1. When someone wins, highlight the three squares that caused the win
