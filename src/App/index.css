@@ -1,3 +1,7 @@
+:root {
+  --board-square-size: 50px;
+}
+
 body {
   font: 14px "Century Gothic", Futura, sans-serif;
   margin: 20px;
@@ -23,13 +27,13 @@ ol, ul {
   float: left;
   font-size: 24px;
   font-weight: bold;
-  line-height: 34px;
-  height: 34px;
+  width: var(--board-square-size);
+  height: var(--board-square-size);
+  line-height: var(--board-square-size);
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
 }
 
 .square:focus {
@@ -47,4 +51,29 @@ ol, ul {
 
 .game-info {
   margin-left: 20px;
+}
+
+.game-info li {
+  list-style: none;
+  margin: 5px;
+}
+
+.game-info li button {
+  width: 150px;
+}
+.game-info .current-step button {
+  font-weight: bold;
+}
+
+.game-info .game-status {
+  height: var(--board-square-size);
+  line-height: var(--board-square-size);
+  font-size: 40px;
+}
+
+.game-info .moves-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: calc(var(--board-square-size) * 2);
 }
