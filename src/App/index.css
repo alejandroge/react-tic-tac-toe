@@ -1,9 +1,20 @@
 :root {
   --board-square-size: 50px;
+  --dark-color: #2e2e2e;
+  --light-color: #a9a9a9;
+  --board-bg-color: #5e5e5e;
+  --button-bg-color: #eee;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font: 14px "Century Gothic", Futura, sans-serif;
+  background-color: var(--dark-color);
   margin: 20px;
 }
 
@@ -22,8 +33,9 @@ ol, ul {
 }
 
 .square {
-  background: #fff;
-  border: 1px solid #999;
+  background-color: var(--board-bg-color);
+  color: var(--light-color);
+  border: 1px solid var(--light-color);
   float: left;
   font-size: 24px;
   font-weight: bold;
@@ -36,12 +48,8 @@ ol, ul {
   text-align: center;
 }
 
-.square:focus {
+.square:focus, .game-info li button:focus {
   outline: none;
-}
-
-.kbd-navigation .square:focus {
-  background: #ddd;
 }
 
 .game {
@@ -59,13 +67,18 @@ ol, ul {
 }
 
 .game-info li button {
+  background-color: var(--light-color);
+  border-color: var(--button-bg-color);
+  color: var(--dark-color);
   width: 150px;
 }
+
 .game-info .current-step button {
-  font-weight: bold;
+  font-weight: 900;
 }
 
 .game-info .game-status {
+  color: var(--light-color);
   height: var(--board-square-size);
   line-height: var(--board-square-size);
   font-size: 35px;
