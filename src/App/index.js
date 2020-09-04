@@ -52,9 +52,10 @@ class App extends React.Component {
         const column = step.squareNo % 3 + 1
         moveDesc = `(${row}, ${column})`
       }
+      const klass = (move === this.state.stepNumber) ? 'current-step' : ''
       const desc = [instruction, moveDesc].join(' ')
       return (
-        <li key={ move }>
+        <li key={ move } className={ klass }>
           <button onClick={() => this.jumpTo(move)}>{ desc }</button>
         </li>
       );
@@ -76,8 +77,8 @@ class App extends React.Component {
           />
         </div>
         <div className="game-info">
-          <div>{ status }</div>
-          <div>{ moves }</div>
+          <div className='game-status'>{ status }</div>
+          <div className='moves-list'>{ moves }</div>
         </div>
       </div>
     );
