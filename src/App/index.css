@@ -55,7 +55,7 @@ ol, ul {
 
 .game-info li {
   list-style: none;
-  margin: 5px;
+  margin: 2px;
 }
 
 .game-info li button {
@@ -68,7 +68,7 @@ ol, ul {
 .game-info .game-status {
   height: var(--board-square-size);
   line-height: var(--board-square-size);
-  font-size: 40px;
+  font-size: 35px;
 }
 
 .game-info .moves-list {
